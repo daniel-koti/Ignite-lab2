@@ -56,7 +56,7 @@ export function Video(props: VideoProps) {
       <div className="bg-black flex justify-center">
         <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
            <Player>
-            <Youtube videoId={data.lesson.videoId}/>
+            <Youtube videoId={data.lesson.videoId} key={data.lesson.videoId}/>
             <DefaultUi />
            </Player>
         </div>
@@ -72,7 +72,7 @@ export function Video(props: VideoProps) {
               {data.lesson.description}
             </p>
 
-            <div className="flex flex items-center gap-4 my-6">
+            <div className="flex items-center gap-4 my-6">
               <img 
                 className="h-16 w-16 rounded-full border-2 border-blue-500"
                 src={data.lesson.teacher.avatarURL}
